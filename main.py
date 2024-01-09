@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
 
-@app.route('/cb', methods=['POST'])
+@app.route('/cb', methods=['POST','GET'])
 def handle_post_request():
     # 这里可以添加你的业务逻辑代码
     data = request.get_json()  # 如果需要解析JSON数据的话
